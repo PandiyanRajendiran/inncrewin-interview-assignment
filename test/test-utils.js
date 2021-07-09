@@ -1,4 +1,6 @@
 import React from 'react';
+import '@testing-library/jest-dom/extend-expect'
+import userEvent from '@testing-library/user-event';
 import { render as rtlRender } from '@testing-library/react';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
@@ -40,4 +42,4 @@ function render(
 // re-export everything
 export * from '@testing-library/react';
 // override render method
-export { render };
+export { render, userEvent };
